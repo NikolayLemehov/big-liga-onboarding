@@ -8,6 +8,9 @@ import {initModals} from './modules/init-modals';
 
 ieFix();
 iosVhFix();
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
 
 // Modules
 // ---------------------------------
