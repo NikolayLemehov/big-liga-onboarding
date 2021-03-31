@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
@@ -6,25 +8,25 @@
 
 // Desktop first
 
-@mixin viewport--xl {
+@mixin viewport--xxl {
   @media (max-width: $viewport--xxl - 1) {
     @content;
   }
 }
 
-@mixin viewport--lg {
+@mixin viewport--xl {
   @media (max-width: $viewport--xl - 1) {
     @content;
   }
 }
 
-@mixin viewport--md {
+@mixin viewport--lg {
   @media (max-width: $viewport--lg - 1) {
     @content;
   }
 }
 
-@mixin viewport--sm {
+@mixin viewport--md {
   @media (max-width: $viewport--md - 1) {
     @content;
   }
