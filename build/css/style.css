@@ -590,6 +590,7 @@ button,
   padding: 100px 112px;
   background-color: #ffffff; }
   body.loaded .loader {
+    display: none;
     cursor: default; }
 
 .loader__inner {
