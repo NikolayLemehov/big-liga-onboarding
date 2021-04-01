@@ -36,36 +36,15 @@
   transform: translate(-50%, -50%);
   width: 100%;
   margin: auto;
+  overflow: hidden;
 
   svg {
     display: block;
     width: 100%;
-    animation: loader-logo 3s linear;
+    animation: loader-logo 0.5s linear;
     animation-fill-mode: forwards;
-
-    //path {
-    //  stroke-dasharray: 600;
-    //  stroke-dashoffset: 600;
-    //  animation: dash 4s linear;
-    //  animation-fill-mode: forwards;
-    //  animation-iteration-count: infinite;
-    //}
   }
 }
-
-//@keyframes dash {
-//  0% {
-//    stroke-dashoffset: 600;
-//  }
-//
-//  50% {
-//    stroke-dashoffset: 0;
-//  }
-//
-//  100% {
-//    stroke-dashoffset: 600;
-//  }
-//}
 
 @keyframes loader-logo {
   0% {
@@ -74,6 +53,32 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+.loader__highlight {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 10px;
+  height: calc(100% + 20px);
+  background-color: $color-default-white;
+  box-shadow: 0 0 10px 0 $color-default-white;
+  animation: highlight 2s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes highlight {
+  0% {
+    transform: translate(-40px, 0) rotate(20deg);
+  }
+
+  60% {
+    transform: translate(1000px, 0) rotate(20deg);
+  }
+
+  100% {
+    transform: translate(1000px, 0) rotate(20deg);
   }
 }
 
