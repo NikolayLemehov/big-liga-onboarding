@@ -1,0 +1,144 @@
+@import "../variables";
+
+.promo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - #{$header_height});
+}
+
+.promo__inner {
+  display: flex;
+  align-items: flex-end;
+  //background-color: yellowgreen;
+  padding-bottom: 205px;
+
+  @media (max-width: $viewport--lg - 1) {
+    align-items: center;
+    padding-bottom: 0;
+    //background-color: yellowgreen;
+    cursor: pointer;
+  }
+}
+
+.promo__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: $viewport--lg - 1) {
+    margin: 0 0 100px;
+  }
+
+  p {
+    margin: 0;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 96px;
+    color: $color-neon-blue;
+
+    & > span {
+      white-space: nowrap;
+    }
+  }
+}
+
+.promo__secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $viewport--lg - 1) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    transform: translate(0, 0);
+    transition: transform $default-transition-settings;
+    background-color: $color-neon-blue;
+  }
+
+  &.container {
+    padding: 0;
+  }
+
+  &--active {
+    transform: translate(100%, 0);
+  }
+
+  p {
+    margin: 0;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    color: $color-default-black;
+
+    @media (max-width: $viewport--lg - 1) {
+      color: $color-default-white;
+    }
+
+    & > span {
+      white-space: nowrap;
+    }
+  }
+}
+
+.promo__secondary-inner {
+  display: flex;
+  flex-direction: column;
+  width: 352px;
+}
+
+.promo__img {
+  $t: $default-transition-settings;
+  margin: 0 0 28px;
+
+  svg .color-blue {
+    fill: $color-neon-blue;
+    transition: fill $t;
+
+    @media (max-width: $viewport--lg - 1) {
+      fill: $color-default-white;
+    }
+  }
+
+  svg .color-violet {
+    fill: $color-vivid-violet;
+    transition: fill $t;
+
+    @media (max-width: $viewport--lg - 1) {
+      fill: $color-default-white;
+    }
+  }
+
+  svg .color-red {
+    fill: $color-torch-red;
+    transition: fill $t;
+
+    @media (max-width: $viewport--lg - 1) {
+      fill: $color-default-white;
+    }
+  }
+}
+
+.promo__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  @media (max-width: $viewport--lg - 1) {
+    display: none;
+  }
+
+  svg {
+    max-width: 100%;
+    height: 94.09%;
+  }
+}

@@ -7,17 +7,16 @@
 
 </head>
 <body>
-
+  @@include("source/html/component/loader.html")
   <div style="display: none;">
     @@include("build/img/sprite_auto.svg")
   </div>
 
   <div class="wrapper">
     @@include("source/html/base/header.html")
-
+    <h1 class="visually-hidden">Главная</h1>
     <main>
-      <div class="container">
-      </div>
+      @@include("source/html/component/promo.html")
     </main>
 
     @@include("source/html/base/footer.html")
